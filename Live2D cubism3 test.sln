@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Live2D cubism3 test", "Live2D cubism3 test.csproj", "{B33049A6-D445-0FFE-D5C1-1112E7FE464C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Live2D cubism3 test.Editor", "Live2D cubism3 test.Editor.csproj", "{CE72C5D5-3E96-687E-5C78-6CD3E39D513F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B33049A6-D445-0FFE-D5C1-1112E7FE464C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B33049A6-D445-0FFE-D5C1-1112E7FE464C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B33049A6-D445-0FFE-D5C1-1112E7FE464C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B33049A6-D445-0FFE-D5C1-1112E7FE464C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE72C5D5-3E96-687E-5C78-6CD3E39D513F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE72C5D5-3E96-687E-5C78-6CD3E39D513F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE72C5D5-3E96-687E-5C78-6CD3E39D513F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE72C5D5-3E96-687E-5C78-6CD3E39D513F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

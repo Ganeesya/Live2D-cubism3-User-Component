@@ -1,0 +1,30 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "横モデル.moc3",
+		"Textures": [
+			"横モデル.4096/texture_00.png",
+			"横モデル.4096/texture_01.png",
+			"横モデル.4096/texture_02.png"
+		],
+		"Physics": "横モデル.physics3.json",
+		"UserData": "横モデル.userdata3.json"
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"PARAM_EYE_L_OPEN",
+				"PARAM_EYE_R_OPEN"
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": [
+				"PARAM_MOUTH_OPEN_Y"
+			]
+		}
+	]
+}
