@@ -5,9 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CE72C5D5-3E96-687E-5C78-6CD3E39D513F}</ProjectGuid>
+    <ProjectGuid>{286BF90C-C80B-0570-AB64-6CBA091D7794}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp-Editor.dll</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -138,9 +138,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Live2D cubism3 test.csproj">
-      <Project>{B33049A6-D445-0FFE-D5C1-1112E7FE464C}</Project>
-      <Name>Live2D cubism3 test</Name>
+    <ProjectReference Include="Live2D cubism3 UserComponent.csproj">
+      <Project>{828839D7-6480-508C-9338-73460D732108}</Project>
+      <Name>Live2D cubism3 UserComponent</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

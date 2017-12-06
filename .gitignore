@@ -15,3 +15,5 @@ Assets/gmcs.rsp
 Assets/csc.rsp.meta
 Assets/csc.rsp
 Assets/blender.meta
+Temp/
+.vs/
