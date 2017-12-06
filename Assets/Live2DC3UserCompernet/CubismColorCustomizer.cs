@@ -12,11 +12,12 @@ public class CubismColorCustomizer : MonoBehaviour
 {
 	public Color color = Color.white;
 	public string targetTag;
+	private string oldTag;
 	
 	private List<CubismRenderer> targetRenderers;
 
 	// Use this for initialization
-	public void Start()
+	void Start()
 	{
 		var drawables = gameObject.GetComponentsInChildren<CubismUserDataTag>();
 		if (targetRenderers == null)
@@ -25,6 +26,12 @@ public class CubismColorCustomizer : MonoBehaviour
 		}
 		else
 		{
+#if UNITY_EDITOR
+			foreach (var e in targetRenderers)
+			{
+				e.Color = Color.white;
+			}
+#endif
 			targetRenderers.Clear();
 		}
 
@@ -35,11 +42,20 @@ public class CubismColorCustomizer : MonoBehaviour
 				targetRenderers.Add(e.gameObject.GetComponent<CubismRenderer>());
 			}
 		}
+#if UNITY_EDITOR
+		oldTag = targetTag;
+#endif
 	}
 
 	// Update is called once per frame
 	public void Update()
 	{
+#if UNITY_EDITOR
+		if (oldTag != targetTag)
+		{
+			Start();
+		}
+#endif
 		foreach (var e in targetRenderers)
 		{
 			e.Color = color;
@@ -63,7 +79,7 @@ public class CubismClrCstmEditer : Editor
 		targetTagProp = serializedObject.FindProperty("targetTag");
 		targetRenderersProp = serializedObject.FindProperty("targetRenderers");
 
-		if(tags == null )
+		if (tags == null)
 		{
 			tags = new List<string>();
 		}
@@ -75,31 +91,32 @@ public class CubismClrCstmEditer : Editor
 
 		foreach (var e in mp.gameObject.GetComponentsInChildren<CubismUserDataTag>())
 		{
-			if(!tags.Exists(x => x == e.Value))
+			if (!tags.Exists(x => x == e.Value))
 			{
 				tags.Add(e.Value);
 			}
 		}
+
+		EditorApplication.update += () =>
+		{
+			((CubismColorCustomizer)target).Update();
+		};
 	}
 
 	public override void OnInspectorGUI()
 	{
+		serializedObject.Update();
 		CubismColorCustomizer mp = (CubismColorCustomizer)target;
 
-		var newColor = EditorGUILayout.ColorField("color",mp.color);
+		mp.color = EditorGUILayout.ColorField("color", mp.color);
 
 		var tagIndex = EditorGUILayout.Popup("targetTag", tags.FindIndex(x => x == mp.targetTag), tags.ToArray());
-		//if (tagIndex == -1) return;
-		//if(mp.targetTag != tags[tagIndex])
-		//{
-		//	mp.color = Color.white;
-		//	mp.Update();
-		//}
+		if (tagIndex == -1)
+		{
+			return;
+		}
 		mp.targetTag = tags[tagIndex];
-		//mp.color = newColor;
-		//mp.targetTag = EditorGUILayout.TextField("targetTag", mp.targetTag);
 
-		mp.Start();
-		mp.Update();
+		serializedObject.ApplyModifiedProperties();
 	}
 }
