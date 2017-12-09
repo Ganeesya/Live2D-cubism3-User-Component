@@ -105,7 +105,7 @@ public class CubismMtnMotionRecoder : MonoBehaviour
 					}
 				}
 			}
-			catch (EndOfStreamException x)
+			catch (EndOfStreamException exc)
 			{ }
 			finally
 			{

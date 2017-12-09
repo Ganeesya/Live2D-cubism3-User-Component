@@ -1,0 +1,9 @@
+﻿  stdafx.cpp
+  dllmain.cpp
+  hidApiCaller.cpp
+     ライブラリ C:\Users\ganep\Documents\Unity Projects\Live2D cubism3 UserComponent\Release\hidApiPicker.lib とオブジェクト C:\Users\ganep\Documents\Unity Projects\Live2D cubism3 UserComponent\Release\hidApiPicker.exp を作成中
+  コード生成しています。
+  All 12 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  コード生成が終了しました。
+  hidApiCaller.vcxproj -> C:\Users\ganep\Documents\Unity Projects\Live2D cubism3 UserComponent\Release\hidApiPicker.dll
+          1 個のファイルをコピーしました。

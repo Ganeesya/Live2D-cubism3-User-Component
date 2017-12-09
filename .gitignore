@@ -17,3 +17,8 @@ Assets/csc.rsp
 Assets/blender.meta
 Temp/
 .vs/
+/obj
+/Debug
+/x64/Release
+/Release
+/bin

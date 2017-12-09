@@ -5,7 +5,6 @@ using Live2D.Cubism.Core;
 using Live2D.Cubism.Framework.Json;
 using Live2D.Cubism.Framework;
 using Live2D.Cubism.Rendering;
-using UnityEngine;
 using System;
 using System.IO;
 
