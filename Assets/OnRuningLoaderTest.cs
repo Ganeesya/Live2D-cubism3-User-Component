@@ -7,6 +7,7 @@ using Live2D.Cubism.Framework;
 using Live2D.Cubism.Rendering;
 using System;
 using System.IO;
+using Ganeesyan.Cubism3Compornets;
 
 public class OnRuningLoaderTest : MonoBehaviour {
 

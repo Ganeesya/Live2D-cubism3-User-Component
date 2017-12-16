@@ -96,6 +96,9 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /B /Y "C:\Users\ganep\Documents\Unity Projects\Live2D cubism3 UserComponent\Debug\hidApiPicker.dll" "C:\Users\ganep\Documents\Unity Projects\Live2D cubism3 UserComponent\Assets\Plugins\x86\hidApiPicker.dll"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -110,6 +113,9 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /B /Y "C:\Users\ganep\Documents\Unity Projects\Live2D cubism3 UserComponent\x64\Debug\hidApiPicker.dll" "C:\Users\ganep\Documents\Unity Projects\Live2D cubism3 UserComponent\Assets\Plugins\x86_64\hidApiPicker.dll"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
