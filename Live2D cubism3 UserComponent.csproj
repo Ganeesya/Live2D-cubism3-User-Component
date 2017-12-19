@@ -337,6 +337,7 @@
     <Compile Include="Assets\Live2DC3UserCompernet\breathing\CubismBreathController.cs" />
     <Compile Include="Assets\Live2DC3UserCompernet\breathing\CubismBreathParameter.cs" />
     <Compile Include="Assets\Live2DC3UserCompernet\coloring\CubismColorCustomizer.cs" />
+    <Compile Include="Assets\Live2DC3UserCompernet\CubismPose.cs" />
     <Compile Include="Assets\Live2DC3UserCompernet\CubismUserExtensionMethods.cs" />
     <Compile Include="Assets\Live2DC3UserCompernet\HID input\Devicing\HIDReader.cs" />
     <Compile Include="Assets\Live2DC3UserCompernet\HID input\Devicing\WacomHIDInputer.cs" />
@@ -351,6 +352,8 @@
     <Compile Include="Assets\Live2DC3UserCompernet\mouse\MouseKeyboardModelController.cs" />
     <Compile Include="Assets\Live2DC3UserCompernet\mouse\params\MouseX.cs" />
     <Compile Include="Assets\Live2DC3UserCompernet\mouse\params\MouseY.cs" />
+    <Compile Include="Assets\Live2DC3UserCompernet\OverLip\OVRLipMicInputSelecter.cs" />
+    <Compile Include="Assets\Live2DC3UserCompernet\OverLip\OVRLipSyncLive2D.cs" />
     <Compile Include="Assets\Live2DC3UserCompernet\recoding\CubismMtnMotionRecoder.cs" />
     <Compile Include="Assets\OnRuningLoaderTest.cs" />
     <Compile Include="Assets\OpenCVForUnity\Examples\Advanced\ComicFilterExample\ComicFilterExample.cs" />
