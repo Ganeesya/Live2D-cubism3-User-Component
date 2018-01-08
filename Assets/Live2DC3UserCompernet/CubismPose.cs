@@ -14,6 +14,11 @@ namespace Ganeesyan.Cubism3Compornets
 
 		public static CubismPose LoadCubismPoseFromAssetPath(string assetpath)
 		{
+			if ((assetpath == string.Empty) || (assetpath == null))
+			{
+				return null;
+			}
+
 			CubismPose cubismPose = null;
 
 			string loadedJson = null;
@@ -69,6 +74,11 @@ namespace Ganeesyan.Cubism3Compornets
 				sumlevel += levels[i];
 			}
 
+			if(sumlevel == 0f)
+			{
+				sumlevel = 1f;
+			}
+
 			for (int i = 0; i < poses.Length; i++)
 			{
 				foreach (var set in poses[i].setting.Keys)
@@ -80,6 +90,24 @@ namespace Ganeesyan.Cubism3Compornets
 			return newpose;
 		}
 
+		public static CubismPose CombinePoses(CubismPose A, CubismPose B, float weightA)
+		{
+			if ((A == null) || (B == null))
+			{
+				return null;
+			}
+
+			CubismPose[] list = new CubismPose[2];
+			list[0] = A;
+			list[1] = B;
+
+			float[] weightlist = new float[2];
+			weightlist[0] = weightA;
+			weightlist[1] = 1f - weightA;
+
+			return CubismPose.CombinePoses(list, weightlist);
+ 		}
+
 		public void SetPosing(CubismModel target, float weight = 1f)
 		{
 			foreach(KeyValuePair<string,float> e in setting)
@@ -90,6 +118,56 @@ namespace Ganeesyan.Cubism3Compornets
 					param.SetToValue(e.Value, weight);
 				}
 			}
+		}
+
+		public static CubismPose operator *(CubismPose x, float y)
+		{
+			CubismPose cubismPose = new CubismPose();
+
+			foreach(var e in x.setting)
+			{
+				cubismPose.setting[e.Key] = e.Value * y;
+			}
+
+			return cubismPose;
+		}
+		
+		public static CubismPose operator +(CubismPose x, CubismPose y)
+		{
+			CubismPose cubismPose = new CubismPose();
+
+			foreach (var e in x.setting)
+			{
+				if (y.setting.ContainsKey(e.Key))
+				{
+					cubismPose.setting[e.Key] = e.Value + y.setting[e.Key];
+				}
+				else
+				{
+					cubismPose.setting[e.Key] = e.Value;
+				}
+			}
+
+			return cubismPose;
+		}
+
+		public static CubismPose operator -(CubismPose x, CubismPose y)
+		{
+			CubismPose cubismPose = new CubismPose();
+
+			foreach (var e in x.setting)
+			{
+				if (y.setting.ContainsKey(e.Key))
+				{
+					cubismPose.setting[e.Key] = e.Value - y.setting[e.Key];
+				}
+				else
+				{
+					cubismPose.setting[e.Key] = e.Value;
+				}
+			}
+
+			return cubismPose;
 		}
 	}
 }

@@ -24,3 +24,6 @@ Temp/
 /bin
 Assets/OVRLipSync/
 x64/
+Assets/AssetStoreTools/
+Assets/LeapMotion/Core/Scripts/VR/Editor/LeapTemporalWarpingEditor.cs
+Assets/LeapMotion/

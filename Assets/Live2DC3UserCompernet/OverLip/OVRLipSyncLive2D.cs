@@ -68,9 +68,10 @@ namespace Ganeesyan.Cubism3Compornets
 			lipsyncContext.Smoothing = SmoothAmount;
 
 		}
-
+		
+		
 		// Update is called once per frame
-		void Update()
+		void LateUpdate()
 		{
 			if (lipsyncContext != null)
 

@@ -1,0 +1,55 @@
+{
+	"Version": 3,
+	"Meta": {
+		"Duration": 3.333,
+		"Fps": 30.0,
+		"Loop": true,
+		"AreBeziersRestricted": true,
+		"CurveCount": 3,
+		"TotalSegmentCount": 3,
+		"TotalPointCount": 6,
+		"UserDataCount": 1,
+		"TotalUserDataSize": 4
+	},
+	"UserData": [
+		{
+			"Time": 0.6,
+			"Value": "test"
+		}
+	],
+	"Curves": [
+		{
+			"Target": "Model",
+			"Id": "EyeBlink",
+			"Segments": [
+				0,
+				1,
+				0,
+				3.333,
+				1
+			]
+		},
+		{
+			"Target": "Model",
+			"Id": "LipSync",
+			"Segments": [
+				0,
+				0,
+				0,
+				3.333,
+				0
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Id": "PARAM_HAND_TYPE_R",
+			"Segments": [
+				0,
+				2,
+				0,
+				3.333,
+				2
+			]
+		}
+	]
+}

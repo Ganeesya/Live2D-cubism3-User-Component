@@ -1,0 +1,23 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "横モデル.moc3",
+		"Textures": [
+			"横モデル.4096/texture_00.png",
+			"横モデル.4096/texture_01.png",
+			"横モデル.4096/texture_02.png"
+		]
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": []
+		}
+	]
+}

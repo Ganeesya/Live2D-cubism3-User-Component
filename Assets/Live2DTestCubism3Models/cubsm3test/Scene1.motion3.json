@@ -5,13 +5,17 @@
 		"Fps": 30.0,
 		"Loop": true,
 		"AreBeziersRestricted": true,
-		"CurveCount": 2,
-		"TotalSegmentCount": 6,
-		"TotalPointCount": 16,
+		"CurveCount": 4,
+		"TotalSegmentCount": 8,
+		"TotalPointCount": 20,
 		"UserDataCount": 3,
 		"TotalUserDataSize": 14
 	},
 	"UserData": [
+		{
+			"Time": 0.933,
+			"Value": "tt"
+		},
 		{
 			"Time": 0.6,
 			"Value": "test"
@@ -19,13 +23,31 @@
 		{
 			"Time": 1.133,
 			"Value": "test end"
-		},
-		{
-			"Time": 0.933,
-			"Value": "tt"
 		}
 	],
 	"Curves": [
+		{
+			"Target": "Model",
+			"Id": "EyeBlink",
+			"Segments": [
+				0,
+				1,
+				0,
+				3.333,
+				1
+			]
+		},
+		{
+			"Target": "Model",
+			"Id": "LipSync",
+			"Segments": [
+				0,
+				0,
+				0,
+				3.333,
+				0
+			]
+		},
 		{
 			"Target": "Parameter",
 			"Id": "PARAM_ANGLE_X",
