@@ -11,9 +11,9 @@ namespace Ganeesyan.Cubism3Compornets
 		public Vector3 handEl;
 		public float handRoll;
 		// Use this for initialization
-		new void Start()
+		public override void Refresh()
 		{
-			base.Start();
+			base.Refresh();
 		}
 
 		// Update is called once per frame

@@ -5,12 +5,9 @@ namespace Ganeesyan.Cubism3Compornets
 {
 	public class LeapmotionFingerPPRight : LMFingerPosepoint
 	{
-
-		// Use this for initialization
-		new void Start()
+		public override void SettingSide()
 		{
 			isLeft = false;
-			base.Start();
 		}
 	}
 }

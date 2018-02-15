@@ -15,11 +15,10 @@ namespace Ganeesyan.Cubism3Compornets
 		public bool settingMode = false;
 
 		public int settingTarget;
-
-		// Use this for initialization
-		protected new void Start()
+		
+		public override void Refresh()
 		{
-			base.Start();
+			base.Refresh();
 		}
 
 		// Update is called once per frame

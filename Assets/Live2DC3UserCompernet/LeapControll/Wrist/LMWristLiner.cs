@@ -13,15 +13,19 @@ namespace Ganeesyan.Cubism3Compornets
 		private List<wristPositionParameter> wristPositonZ;
 
 		public Vector3 wristPoint;
+		private Vector3 outputData;
+
+		public Vector3 ZeroPos;
+		public float scale = 1;
 
 		// Use this for initialization
-		new void Start()
+		public override void Refresh()
 		{
-			base.Start();
+			base.Refresh();
 			wristPositonX = new List<wristPositionParameter>();
 			wristPositonY = new List<wristPositionParameter>();
 			wristPositonZ = new List<wristPositionParameter>();
-			foreach (var param in model.transform.GetComponentsInChildren<wristPositionParameter>())
+			foreach (var param in model.GetComponentsInChildren<wristPositionParameter>())
 			{
 				if(param.isLeft == isLeft)
 				{
@@ -41,6 +45,25 @@ namespace Ganeesyan.Cubism3Compornets
 			}
 		}
 
+		public void castZeroSet()
+		{
+			Invoke("SetDefault", 3f);
+		}
+
+		public void SetDefault()
+		{
+			var hand = leapmotionInputer.getHanddata(isLeft);
+			var handRev = leapmotionInputer.getHanddata(!isLeft);
+			if (hand != null)
+			{
+				ZeroPos = hand.WristPosition.ToVector3();
+				if (handRev != null)
+				{
+					scale = (handRev.WristPosition.ToVector3() - ZeroPos).magnitude;
+				}
+			}
+		}
+
 		// Update is called once per frame
 		void LateUpdate()
 		{
@@ -48,18 +71,19 @@ namespace Ganeesyan.Cubism3Compornets
 			if(hand != null)
 			{
 				wristPoint = hand.WristPosition.ToVector3();
+				outputData = (wristPoint - ZeroPos) / scale;
 
 				foreach (var x in wristPositonX)
 				{
-					x.setParam(wristPoint.x);
+					x.setParam((wristPoint.x - ZeroPos.x)/scale);
 				}
 				foreach (var y in wristPositonY)
 				{
-					y.setParam(wristPoint.y);
+					y.setParam((wristPoint.y - ZeroPos.y) / scale);
 				}
 				foreach (var z in wristPositonZ)
 				{
-					z.setParam(wristPoint.z);
+					z.setParam((wristPoint.z - ZeroPos.z) / scale);
 				}
 			}
 		}

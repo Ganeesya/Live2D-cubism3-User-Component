@@ -8,15 +8,9 @@ namespace Ganeesyan.Cubism3Compornets
 	{
 
 		// Use this for initialization
-		new void Start()
+		public override void Refresh()
 		{
-			base.Start();
-		}
-
-		// Update is called once per frame
-		void LateUpdate()
-		{
-
+			base.Refresh();
 		}
 	}
 }

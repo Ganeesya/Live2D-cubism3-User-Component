@@ -1,0 +1,19 @@
+{
+	"Version": 3,
+	"Meta": {
+		"UserDataCount": 2,
+		"TotalUserDataSize": 25
+	},
+	"UserData": [
+		{
+			"Target": "ArtMesh",
+			"Id": "ArtMesh155",
+			"Value": "RightHandTag"
+		},
+		{
+			"Target": "ArtMesh",
+			"Id": "ArtMesh156",
+			"Value": "RightElborTag"
+		}
+	]
+}

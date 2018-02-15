@@ -29,6 +29,11 @@ namespace Ganeesyan.Cubism3Compornets
 		
 		public void setParam(float input)
 		{
+			parameter.SetToValue((isReverse ? (0f - input) : input));
+		}
+
+		public void setParamPersent(float input)
+		{
 			parameter.SetToPersent(( isReverse ? (1f - input) : input ) * (max - min) + min);
 		}
 	}

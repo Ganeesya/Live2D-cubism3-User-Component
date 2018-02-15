@@ -6,7 +6,7 @@ using Live2D.Cubism.Core;
 
 namespace Ganeesyan.Cubism3Compornets
 {
-	public class LMHandControllBase : MonoBehaviour
+	abstract public class LMHandControllBase : MonoBehaviour
 	{
 		protected LeapmotionInputer leapmotionInputer;
 
@@ -22,8 +22,14 @@ namespace Ganeesyan.Cubism3Compornets
 		//}
 
 		// Use this for initialization
-		protected void Start()
+		void Start()
 		{
+			Refresh();
+		}
+
+		public virtual void Refresh()
+		{
+			SettingSide();
 			model = GetComponent<CubismModel>();
 			if (model == null)
 			{
@@ -31,6 +37,11 @@ namespace Ganeesyan.Cubism3Compornets
 			}
 			leapmotionInputer = GameObject.FindObjectOfType<LeapmotionInputer>();
 			Debug.Log("LMHandControllBase : Start()");
+		}
+
+		public virtual void SettingSide()
+		{
+
 		}
 	}
 }

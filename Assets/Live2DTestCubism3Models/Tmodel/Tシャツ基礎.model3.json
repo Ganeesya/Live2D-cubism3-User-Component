@@ -4,17 +4,18 @@
 		"Moc": "Tシャツ基礎.moc3",
 		"Textures": [
 			"Tシャツ基礎.2048/texture_00.png"
-		]
+		],
+		"UserData": "Tシャツ基礎.userdata3.json"
 	},
 	"Groups": [
 		{
 			"Target": "Parameter",
-			"Name": "LipSync",
+			"Name": "EyeBlink",
 			"Ids": []
 		},
 		{
 			"Target": "Parameter",
-			"Name": "EyeBlink",
+			"Name": "LipSync",
 			"Ids": []
 		}
 	]

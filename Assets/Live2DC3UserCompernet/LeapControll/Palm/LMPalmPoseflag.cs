@@ -38,9 +38,8 @@ namespace Ganeesyan.Cubism3Compornets
 		private Vector3 handVect;
 
 		// Use this for initialization
-		protected new void Start()
+		public override void Refresh()
 		{
-			base.Start();
 			lance = CubismPose.LoadCubismPoseFromAssetPath(lancePath);
 			wrist = CubismPose.LoadCubismPoseFromAssetPath(wristPath);
 			chop = CubismPose.LoadCubismPoseFromAssetPath(chopPath);

@@ -324,6 +324,9 @@
     <Compile Include="Assets\LeapMotion\Core\Scripts\Algorithms\SmoothedFloat.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Algorithms\SmoothedQuaternion.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Algorithms\SmoothedVector3.cs" />
+    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\CubicHermiteSpline\HermiteSpline.cs" />
+    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\CubicHermiteSpline\HermiteSpline2.cs" />
+    <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\CubicHermiteSpline\HermiteSpline3.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\Ease.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\IValueProxy.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Animation\TransformTweenBehaviour.cs" />
@@ -343,6 +346,7 @@
     <Compile Include="Assets\LeapMotion\Core\Scripts\Attachments\AttachmentPointFlags.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\AutoFindAttribute.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\CombinablePropertyAttribute.cs" />
+    <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\CurveBounds.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\Disable.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\DisableIf.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Attributes\EditTimeOnly.cs" />
@@ -366,6 +370,7 @@
     <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\MultiTypedList.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\MultiTypedReference.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\Pool.cs" />
+    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\Pose.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\ProduceConsumeBuffer.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\ReadonlyHashSet.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\ReadonlyList.cs" />
@@ -375,6 +380,7 @@
     <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\SerializableType.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\StreamingAsset.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\StreamingFolder.cs" />
+    <Compile Include="Assets\LeapMotion\Core\Scripts\DataStructures\Type.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\DetectionUtilities\AbstractHoldDetector.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\DetectionUtilities\Detector.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\DetectionUtilities\DetectorLogicGate.cs" />
@@ -410,12 +416,14 @@
     <Compile Include="Assets\LeapMotion\Core\Scripts\Query\ListAndArrayExtensions.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Query\OfType.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Query\QueryWrapper.cs" />
+    <Compile Include="Assets\LeapMotion\Core\Scripts\Query\Repeat.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Query\Select.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Query\SelectMany.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Query\SkipCount.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Query\SkipWhile.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Query\TakeCount.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Query\TakeWhile.cs" />
+    <Compile Include="Assets\LeapMotion\Core\Scripts\Query\Values.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Query\Where.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Query\WithPrevious.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Query\Zip.cs" />
@@ -430,6 +438,7 @@
     <Compile Include="Assets\LeapMotion\Core\Scripts\Space\LeapSpaceAnchor.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Testing\LeapTestBase.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Testing\StationaryTestLeapProvider.cs" />
+    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\AnimationCurveUtil.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\AssertHelper.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\BitConverterNonAlloc.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\Comment.cs" />
@@ -437,6 +446,7 @@
     <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\DisconnectionNotice.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\EditorResources.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\EnableDepthBuffer.cs" />
+    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\Enum.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\EnumEventTable.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\ExecutionOrder.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\FitHeightToScreen.cs" />
@@ -455,8 +465,10 @@
     <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\RuntimeGizmoToggle.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\SingleLayer.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\StretchToScreen.cs" />
+    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\Swizzle.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\TransformUtil.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\Utils.cs" />
+    <Compile Include="Assets\LeapMotion\Core\Scripts\Utils\XRSupportUtil.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\VR\EyeType.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\VR\LeapVRCameraControl.cs" />
     <Compile Include="Assets\LeapMotion\Core\Scripts\VR\LeapVRTemporalWarping.cs" />
@@ -560,6 +572,7 @@
     <Compile Include="Assets\Live2D\Cubism\Samples\LookAt\Billboarder.cs" />
     <Compile Include="Assets\Live2D\Cubism\Samples\Masking\MaskTexturePreview.cs" />
     <Compile Include="Assets\Live2D\Cubism\Samples\Raycasting\RaycastHitDisplay.cs" />
+    <Compile Include="Assets\Live2DC3UserCompernet\AutoParamRoller.cs" />
     <Compile Include="Assets\Live2DC3UserCompernet\breathing\CubismBreathController.cs" />
     <Compile Include="Assets\Live2DC3UserCompernet\breathing\CubismBreathParameter.cs" />
     <Compile Include="Assets\Live2DC3UserCompernet\coloring\CubismColorCustomizer.cs" />
@@ -944,6 +957,7 @@
     <Compile Include="Assets\OVRLipSync\Scripts\OVRLipSyncContextTextureFlip.cs" />
     <Compile Include="Assets\OVRLipSync\Scripts\OVRLipSyncMicInput.cs" />
     <Compile Include="Assets\OVRLipSync\Scripts\OVRLipSyncSequence.cs" />
+    <Compile Include="Assets\test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DlibFaceLandmarkDetector\StreamingAssets\haarcascade_frontalface_alt.xml" />
@@ -979,6 +993,17 @@
     <None Include="Assets\OpenCVForUnity\StreamingAssets\text\trained_classifierNM1.xml" />
     <None Include="Assets\OpenCVForUnity\StreamingAssets\text\trained_classifierNM2.xml" />
     <None Include="Assets\OpenCVForUnity\StreamingAssets\text\trained_classifier_erGrouping.xml" />
+    <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Readme.txt" />
+    <None Include="Assets\Standard Assets\Effects\Projectors\Guidelines.txt" />
+    <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
+    <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
+    <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
+    <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
+    <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
+    <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
+    <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
+    <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -14,9 +14,9 @@ namespace Ganeesyan.Cubism3Compornets
 		private List<List<FingerExtendParameter>> fingerParams;
 
 		// Use this for initialization
-		protected new void Start()
+		public override void Refresh()
 		{
-			base.Start();
+			base.Refresh();
 
 			fingerLevels = new List<float>();
 
